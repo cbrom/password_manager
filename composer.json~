@@ -1,0 +1,16 @@
+{
+    "require": {
+        "illuminate/database": "^5.4",
+        "phpunit/phpunit": "^5.7",
+        "behat/behat": "3.0.6",
+      	"behat/mink": "1.6.*",
+      	"behat/mink-extension": "*",
+      	"behat/mink-selenium2-driver": "*",
+      	"behat/mink-goutte-driver": "*"
+    },
+    "autoload": {
+    	"classmap": [
+    		"app/models"
+    	]
+    }
+}

@@ -1,0 +1,485 @@
+
+
+*
+{
+ margin:0 auto;
+ padding:0;
+}
+
+body{
+    background: #f0f0f0;
+    font-family: "ubuntu", arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #666;
+    font-weight: 300;
+}
+
+header{
+    width: 100%;
+    display: block;
+    background: #f0f0f0 !important;
+    
+}
+header nav{
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0.15);
+    display: block;
+    margin-top: 0px;
+
+}
+header nav ul{
+    position: relative; 
+    
+    padding: 0 5%;
+    display: inline-block;
+    list-style: none;
+    width: 70%;
+    margin-left: 100px;
+    background: rgba(41, 122, 255, 0.9);
+    
+}
+header nav ul li{
+    list-style: none;
+    display: inline-block;
+    color: #666;
+    float: left;
+    margin: 0 1px;
+}
+
+
+
+header nav ul li a{
+    
+    line-height: 50px;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+
+header nav ul li form input{
+    padding: 10px;
+    width: 200px;
+    margin:0px auto;
+    margin-top: 5px;
+    
+    line-height: 10px;
+    vertical-align: 3px;
+    
+}
+#search{
+    float: right;
+}
+#search form{
+    padding: 0px;
+    float:right;
+}
+#search-btn{
+    width: 100px;
+}
+
+
+
+main{
+    width: 80%;
+    
+    margin: 0 auto;
+    
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+
+
+#main-form
+{
+    
+    margin-top:70px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0.15) ;
+    border-radius: 0px;
+    min-height: 600px;
+    padding-bottom: 20px;
+}
+
+#login-form{
+    margin: 0 auto;
+    border-right:solid #e1e1e1 2px;
+    width: 45%;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+#login-form table{
+    margin: 0 auto;
+    padding: 25px;
+    border: none;
+    float:left;
+}
+#login-form table tr, td{
+    padding: 25px;
+    border-bottom:solid #e1e1e1 1px;
+}
+
+#signup-form{
+    marign: 0 auto;
+    width: 45%;
+    padding: 10px;
+    display: inline-block;
+}
+
+#signup-form table{
+    margin: 0 auto;
+    padding: 25px;
+    border: none;
+
+}
+
+#signup-form table tr, td{
+    border-bottom: solid #e1e1e1 2px;
+}
+
+
+
+
+table
+{
+    
+ border:solid #dcdcdc 1px;
+    border-left: 0px;
+ padding:25px;
+ box-shadow: 0px 0px 0px 0px 1px rgba(0,0,0,0.2);
+    margin-right: 500px;
+}
+table tr,td
+{
+ padding:15px;
+ //border:solid #e1e1e1 1px;
+}
+table tr td input
+{
+ width:97%;
+ height:45px;
+ border:solid #e1e1e1 1px;
+ border-radius:3px;
+ padding-left:10px;
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:16px;
+ background:#f9f9f9;
+ transition-duration:0.5s;
+ box-shadow: inset 0px 0px 1px rgba(0,0,0,0.4);
+}
+
+table tr td button
+{
+ width:100%;
+ height:45px;
+ border:0px;
+ background:rgba(12,45,78,11);
+ background:-moz-linear-gradient(top, #595959 , #515151);
+ border-radius:3px;
+ box-shadow: 1px 1px 1px rgba(1,0,0,0.2);
+ color:#f9f9f9;
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:18px;
+ font-weight:bolder;
+ text-transform:uppercase;
+}
+table tr td button:active
+{
+ position:relative;
+ top:1px;
+}
+table tr td a
+{
+ text-decoration:none;
+ color:#00a2d1;
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:18px;
+}
+
+
+
+
+
+/* css for home page */
+
+
+
+
+
+
+
+/* main css for display vault*/
+
+
+
+#vault {
+    margin: 0 auto;
+    padding: 0px;
+}
+#items {
+    display: block;
+    width: 90%;
+    background: rgba(0,0,0, 0.55);
+    margin-bottom: 5px;
+    margin-top: 0px;
+    border-radius: 20px;
+    
+}
+.item{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 5px;
+    margin: 5px auto;
+    margin-left: 10px;
+    font-family: nyala;
+    text-transform: uppercase;
+    color: white;
+    
+}
+.item p{
+    display: inline-block;
+    line-height: 0px;
+    vertical-align: 7px;
+}
+
+.item form input{
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.item div{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 30px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px 5px rgba(200,2000,2000,0.2),0 1px 0 rgba(255,255,255,0.15) ;
+    margin: 0px 5px;
+    color: wihte;
+    font-size: 60px;
+}
+.item div a{
+    text-decoration: none;
+    color: #aeff31;
+}
+
+.data{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: block;
+    
+    
+    
+    
+}
+#accounts {
+    display: block;
+    padding: 10px;
+    list-style: none;
+    border:solid #e1e1e1 2px;
+    border-radius: 20px;
+    
+    
+}
+.block{
+    display: block;
+    
+}
+
+.sites {
+    list-style-type: none;
+    margin-left: 20px;
+    color: white;
+    
+     
+    
+}
+.sites li{
+    background: rgba(0,0,0, 0.55);
+    margin: 1px;
+    display: block;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+.sites li p{
+    display: inline-block;
+    width: 100px;
+}
+.sites li button{
+    padding: 3px;
+}
+
+
+#forms {
+    display: block;
+    padding: 10px;
+    list-style: none;
+    border:solid #e1e1e1 2px;
+    border-radius: 20px;
+    
+    
+    
+}
+
+
+.display{
+    display: block;
+    float: left;
+    width: 30%;
+    padding: 20px 0px;
+}
+#displayforms{
+    display: block;
+    list-style: none;
+    padding: 20px;
+}
+#displayforms li{
+    padding: 2px;
+    
+}
+
+
+.add{
+    display: block;
+}
+
+/* css for note*/
+
+
+.displaynotes{
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+.displaynotes h2{
+    width: 80%;
+    background:#3aadf4;
+    padding: 5px;
+}
+.displaynotes h3{
+    display: inline-block;
+    width: 40%;
+}
+.displaynotes div ul{
+    width: 100%;
+    display: block;
+    padding: 0px;
+    list-style: none;
+}
+.displaynotes div ul li{
+    width: 45%;
+    display: inline-block;
+    padding: 1px;
+   
+}
+.noteform{
+    width: 45%;
+    display: inline-block;
+}
+
+.noteform h2{
+    width: 85%;
+    background: #3aadf4;
+    padding: 5px;
+}
+.noteform div{
+    display: block;
+}
+.noteform div textarea{
+    width: 92%;
+    padding: 2px;
+
+}
+.noteform div button{
+    width:100px;
+    height:35px;
+    border:0px;
+    background:rgba(12,45,78,11);
+    background:-moz-linear-gradient(top, #595959 , #515151);
+    border-radius:3px;
+    box-shadow: 1px 1px 1px rgba(1,0,0,0.2);
+    color:#f9f9f9;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:14px;
+    font-weight:bolder;
+    text-transform:uppercase;
+}
+
+
+
+/* css for formfill*/
+
+.addform
+{
+    
+ border:solid #dcdcdc 1px;
+ box-shadow: 0px 0px 0px 0px 1px rgba(0,0,0,0.2);
+ margin-left: 250px;
+}
+
+.addform tr,td
+{
+    padding: 2px;
+ 
+ 
+}
+
+.addform tr td label{
+    border-radius: 5px;
+    padding: 10px;
+    background:#e1e1e1;
+    color: white;
+}
+.addform tr td input
+{
+ width:97%;
+ height:35px;
+ width: 150px;
+ border:solid #e1e1e1 1px;
+ border-radius:3px;
+ 
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:14px;
+ background:#f9f9f9;
+ transition-duration:0.5s;
+ box-shadow: inset 0px 0px 1px rgba(0,0,0,0.4);
+}
+
+.addform tr td button
+{
+ width:100%;
+ height:45px;
+ border:0px;
+ background:rgba(12,45,78,11);
+ background:-moz-linear-gradient(top, #595959 , #515151);
+ border-radius:3px;
+ box-shadow: 1px 1px 1px rgba(1,0,0,0.2);
+ color:#f9f9f9;
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:18px;
+ font-weight:bolder;
+ text-transform:uppercase;
+}
+.addform tr td button:active
+{
+ position:relative;
+ top:1px;
+}
+.addform tr td a
+{
+ text-decoration:none;
+ color:#00a2d1;
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:18px;
+}

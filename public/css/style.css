@@ -1,0 +1,37 @@
+
+
+
+.btn {padding:10px 20px; background: #F4F4F2;}
+.btn_red {background: #ED6347; color: #FFF;}
+
+.btn:hover {background: #E4E4E2;}
+.btn_red:hover {background: #C12B05;}
+
+a.btn {color:#666; text-align: center; text-decoration: none;}
+a.btn_red {color: #FFF;}
+
+
+
+.user_register {
+    top: 20px;
+    width: 60%;
+    color: white;
+}
+.user_register h3{
+    background: #ed6347;
+    padding: 5px;
+    width: 50%;
+}
+.user_register label {display: block; margin-bottom:0px;}
+.user_register input[type="text"],
+.user_register input[list="folders"],
+.user_register input[type="email"], 
+.user_register input[type="password"], 
+.user_register input[type="url"]
+{
+    display: block; 
+    width:90%; 
+    padding: 10px; 
+    border:1px solid #DDD; 
+}
+ 
