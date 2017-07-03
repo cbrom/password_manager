@@ -90,7 +90,7 @@ class NotesTest extends TestCase
     /** @test */
     public function test_content_is_trimmed()
     {
-        $content = "lksjdfl lskdjf l    ";
+        $content = "  ksjdfl lskdjf l    ";
         $expected = trim($content);
         $this->note->setContent($content);
         $this->assertEquals($this->note->getContent(), $expected);
