@@ -85,6 +85,14 @@ class UsersTest extends TestCase
     }
 
     /** @test */
+    public function test_email_above_limit_exception()
+    {
+        $email = "aaaaabbbbbccccc@gmail.dddddeeeeefffffggggg";
+        $this->expectException(AboveLimitException::class);
+        $this->user->setEmail($email);
+    }
+
+    /** @test */
     public function test_email_is_trimmed()
     {
         $email = "   cs@gmail.com ";
