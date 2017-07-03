@@ -1,0 +1,9 @@
+default:
+  extensions:
+    Behat\MinkExtension:
+      base_url: "http://localhost/cbs_projects/password_manager_clean"
+      sessions:
+        first_session:
+          goutte: ~
+        second_session:
+          selenium2: ~
