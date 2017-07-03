@@ -125,6 +125,7 @@
             
 
 <?php
+  //var_dump($data['data']);
   $folder_count = $data['data']['folders']->count();
   $site_count = $data['data']['sites']->count();
 
