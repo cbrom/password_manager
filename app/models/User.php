@@ -9,10 +9,10 @@ require_once "Site.php";
 
 class User extends Eloquent
 {
-	protected $username;
-	protected $email;
-	protected $password;
-	protected $id;
+	// protected $username;
+	// protected $email;
+	// protected $password;
+	// protected $id;
 
 	protected $fillable = ['username', 'email', 'password'];
 
