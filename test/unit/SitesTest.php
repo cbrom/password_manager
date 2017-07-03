@@ -203,17 +203,17 @@ class SitesTest extends TestCase
     /** @test */
     public function test_password_above_limit_exception()
     {
-        $username = "aaaaa-bbbbb-ccccc-ddddd-eeeee-fffff-ggggg";
+        $password = "aaaaa-bbbbb-ccccc-ddddd-eeeee-fffff-ggggg";
         $this->expectException(AboveLimitException::class);
-        $this->site->setPassword($username);
+        $this->site->setPassword($password);
     }
 
     /** @test */
     public function test_password_is_trimmed()
     {
-        $username = " \t sldkf    ";
-        $expected = trim($username);
-        $this->site->setPassword($username);
+        $password = " \t sldkf    ";
+        $expected = trim($password);
+        $this->site->setPassword($password);
         $this->assertEquals($this->site->getPassword(), $expected);
     }
 
