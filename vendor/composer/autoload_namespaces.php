@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'WebDriver' => array($vendorDir . '/instaclick/php-webdriver/lib'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
     'Behat\\Transliterator' => array($vendorDir . '/behat/transliterator/src'),
