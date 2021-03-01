@@ -125,9 +125,25 @@
             
 
 <?php
-  //var_dump($data['data']);
-  $folder_count = $data['data']['folders']->count();
-  $site_count = $data['data']['sites']->count();
+  // var_dump($data['data']['folders']);
+  // $d = $data['data']['folders'] == 0;
+  //var_dump($d);
+
+  if($data['data']['folders'] == NULL)
+  {
+    $folder_count = 0;
+  } else {
+    $folder_count = $data['data']['folders']->count();
+  }
+  if ($data['data']['sites'] == NULL)
+  {
+    $site_count = 0;
+  } else {
+    $site_count = $data['data']['sites']->count();
+  }
+ 
+  // $folder_count = $data['data']['folders']->count();
+  // $site_count = $data['data']['sites']->count();
 
   $folders = $data['data']['folders'];
   $sites = $data['data']['sites'];

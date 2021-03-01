@@ -43,14 +43,19 @@ class AuthController extends Controller
 			return $this->view('auth/login_signup', ['error'=>$this->error, 'msg'=>$this->msg]);
 		}
 
-		$user = User::addUser($username, $email, md5($password));
+		// $user = User::addUser($username, $email, md5($password));
+		$user = new User;
+		$user->setUserName($username);
+		$user->setEmail($email);
+		$user->setPassword($password);
+		$user = $user->addUser();
 		var_dump($user);
 		if ($user != NULL)
 		{
 			//create user account and return to home
 			$this->msg['status'] = "welcome";
-			echo $user->email . " " . $user->password;
-			if(User::loginUser($user->email, $user->password))
+			echo $user->getEmail() . " " . $user->getPassword();
+			if(User::loginUser($user->getEmail(), $user->getPassword()))
 			{
 				//go to home
 				return $this->view('display/vault', ['error'=>$this->error, 'msg'=>$this->msg]);
@@ -61,10 +66,13 @@ class AuthController extends Controller
 
 	public function signin()
 	{
-
-		if( !isset($_POST['email']) || !isset($_POST['password']))
+		if( isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] !== "POST")
 		{
 			return $this->view('auth/login_signup', ['error'=>$this->error, 'msg'=>$this->msg]);
+		} else if( !isset($_POST['email']) || !isset($_POST['password']))
+		{
+			
+			return $this->setHeader('auth/signin');
 		}
 		$email = $_POST['email'];
 		$password = $_POST['password'];

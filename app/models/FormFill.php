@@ -14,7 +14,7 @@ class FormFill extends Eloquent
 			throw new InputEmptyException;
 		}
 		$user_id = Validator::validateInt($user_id);
-		if ($user_id <= 0)
+		if ($user_id < 0)
 		{
 			throw new NegativeUserIdException;
 		} else if ($user_id == NULL)

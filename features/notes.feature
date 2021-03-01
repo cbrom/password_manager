@@ -1,12 +1,11 @@
 Feature: addNote
 	In order to add a new note
 	As a website user
-	I need to be logged in
+	I need to be loggedin
 
-	Scenario: add new note	
-		Given I am on "/display/notes"
-		Then I should see "New Note"
-		When I fill in "noteTitle" with "noteTitle"
-		When I fill in "note" with "test new note"
-		And I press "Save Note"
-		Then I should savenote
+
+	Scenario: addNote
+		Given I am loggedin
+		Given I am on "display/vault"
+		Then I shoudl see "fuck off"
+		Then I should be on "display/notes"

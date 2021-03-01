@@ -5,20 +5,13 @@ Feature: SignInSignUp
 
 	Scenario: sign in and sign up
 		Given I am on "/auth/signin"
-    	Then I should see "PSD MGR"
+    	Then I should see "HOME"
 
-    	Scenario: sign in
-			Given I am on "/auth/signin"
-			And I have an email "cs@gmail.com"
-			And I have a password "password"
-			When I signIn
-			Then I should be on "/"
-
-		Scenario: sign up
-			Given I am on "/auth/signup"
-			And I have a username "Test User name"
-			And I have an email "test@gmail.com"
-			And I have a password "newpassword"
-			And I have a confirm_password "newpassword"
-			When I signUp
-			Then I should be on "/"
+	Scenario: sign in
+		Given I am on "/auth/signin"
+		When I fill in "email" with "cs@gmail.com"
+		When I fill in "password" with "password"
+		And I press "btn-login"
+		Then I signIn
+		Then I should be on "/display/vault"
+		Then I should see "REPOSITORY"

@@ -13,8 +13,8 @@ require_once 'app/models/FormFill.php';
 require_once 'app/models/Note.php';
 require_once 'app/models/Site.php';
 require_once 'app/models/Site.php';
-require_once 'app/core/Validate.php';
-require_once 'app/database.php';
+require_once 'app/init.php';
+
 
 /**
  * Defines application features from the specific context.
@@ -33,6 +33,7 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext
     protected $formfill;
     protected $note;
     protected $site;
+    protected $password;
 
 
 
@@ -59,6 +60,7 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext
     public function iHaveAPassword($arg1)
     {
         $this->user->setPassword($arg1);
+        $this->password = $arg1;
     }
 
     /**
@@ -66,8 +68,10 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext
      */
     public function iSignin()
     {
-        User::loginUser($this->user->getEmail(), "password");
-        echo true;
+        require_once 'app/controllers/auth_controller.php';
+        $controller = new AuthController;
+
+        $controller->signin();
     }
 
     /**
@@ -75,7 +79,7 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext
      */
     public function iHaveAUsername($arg1)
     {
-        throw new PendingException();
+        //throw new PendingException();
     }
 
     /**
@@ -83,7 +87,7 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext
      */
     public function iHaveAConfirmPassword($arg1)
     {
-        throw new PendingException();
+        //throw new PendingException();
     }
 
     /**
@@ -109,5 +113,22 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext
     public function iShouldSavenote()
     {
         echo $_POST["note"];
+    }
+
+    /**
+     * @Given I click the :arg1 element
+     */
+    public function iClickTheElement($arg1)
+    {
+        $page = $this->getSession()->getPage();
+        //var_dump($page);
+        $element = $page->find('xpath', $this->getSession()->getSelectorsHandler()->selectorToXpath('xpath', '*//*[text()="' . $arg1 . '"]'));
+
+        if (empty($element))
+        {
+            throw new Exception("No html element found");
+        }
+
+        $element->click();
     }
 }

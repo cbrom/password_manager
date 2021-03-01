@@ -40,9 +40,9 @@
                     <li>
                       <a class="">Display</a>
                       <ul>
-                        <li><a href="vault">Vault</a></li>
-                        <li><a href="notes" class='is-active'>Notes</a></li>
-                        <li><a href="form_fills">Form Fills</a></li>
+                        <li><a id="vaultlink" href="vault">Vault</a></li>
+                        <li><a id="noteslink" href="notes" class='is-active'>Notes</a></li>
+                        <li><a id="formfilllink" href="form_fills">Form Fills</a></li>
                       </ul>
                     </li>
                   </ul>

@@ -125,7 +125,7 @@ class User extends Eloquent
 		{
 			return Site::where('user_id', $this->id)->get();
 		}
-		return Site::where('user_id', $this->id)->get();
+		return Site::where('user_id', $this->id)->count();
 	}
 	public function folders()
 	{
@@ -154,15 +154,11 @@ class User extends Eloquent
 		return SharedNote::where('user_id', $this->id)->count();
 	}
 
-	public function addUser($username, $email, $password)
+	public function addUser()
 	{
-		$user = new User;
-		$user->username = $username;
-		$user->email = $email;
-		$user->password = $password;
-		if(User::create(['username'=>$username, 'password'=>$password, 'email'=>$email]))
+		if($this->save())
 		{
-			return $user;
+			return $this;
 		}
 		return NULL;
 	}

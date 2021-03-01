@@ -139,16 +139,7 @@ class SitesTest extends TestCase
         $this->expectException(InputEmptyException::class);
         $this->site->setUsername();
     }
-
-    /** @test */
-    public function test_save_uppercase_username()
-    {
-        $username = "cbrom";
-        $expected = trim($username);
-        $this->site->setUserName($username);
-
-        $this->assertEquals($this->site->getUserName(), $expected);
-    }
+    
     /** @test */
     public function test_username_above_limit_exception()
     {
